@@ -4,6 +4,9 @@ export default ({ env }) => ({
   app: {
     keys: env.array('APP_KEYS'),
   },
-  url: env('URL'),
+   url: env('PUBLIC_URL', 'http://localhost:1337'),
+  dirs: {
+    public: 'public', // Ensure the public folder is configured correctly
+  },
   proxy: true
 });
