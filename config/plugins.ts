@@ -11,6 +11,9 @@ export default ({ env }) => ({
                 cloud_name: env('CLOUDINARY_NAME'),
                 api_key: env('CLOUDINARY_KEY'),
                 api_secret: env('CLOUDINARY_SECRET'),
+                 localServer: {
+                      url: env('MEDIA_BASE_URL', '/uploads/'), // Default for local uploads
+                    },
             },
             actionOptions: {
                 upload: {},
